@@ -21,7 +21,9 @@ body {
     radial-gradient(circle at 80% 0%, rgba(16, 185, 129, 0.1), transparent 24%),
     #f8fafc;
 }
-
+main {
+    padding: 0 10rem;
+}
 img {
   max-width: 100%;
   display: block;
