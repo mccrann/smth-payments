@@ -1,0 +1,6 @@
+export const REFUND_STATUSES = {
+  pending: "Pending",
+  processed: "Processed",
+  failed: "Failed",
+  lost: "lost"
+};
