@@ -7,5 +7,7 @@ export const PAYOUT_STATUSES = {
   in_transit: "In Transit",
   lost: "Lost",
   deposited: "Deposited",
-  success: "Success"
+  success: "Success",
+  unknown: "Unknown",
+  error: "Error"
 };
