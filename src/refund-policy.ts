@@ -1,6 +1,6 @@
 // src/refund-policy.ts
 
 export const REFUND_PROCESSING_DAYS = {
-  minimum: 20,
-  maximum: 22,
+  minimum: 21,
+  maximum: 23,
 };
