@@ -1,155 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smth Payments | Smooth payment solutions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles-demo.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Demo Dashboard | Smth Payments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-demo.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-brand">
-      <div class="mark">SMTH</div>
-      <span>Payments</span>
-    </div>
-    <nav class="site-nav">
-      <a href="#features">Features</a>
-      <a href="#security">Security</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="button button-secondary">Contact</a>
-      <a href="/demo" class="button button-outline">View demo dashboard</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero section-hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Payments built for modern businesses</p>
-        <h1>Demo Dashboard</h1>
-        <p class="hero-text"></p>
-      </div>
-      <div class="hero-visual">
-        <div class="card-card">
-          <div class="card-header">
-            <span>Live volume</span>
-            <strong>$1.8M</strong>
-          </div>
-          <div class="card-body">
-            <div class="stat">
-              <span class="stat-label">Success rate</span>
-              <strong>99.97%</strong>
+    <main>
+        <div class="sidebar">
+            <h1>SMTH <span>Payments</span></h1>
+            <nav class="site-nav">
+                <ul>
+                    <li class="icon icon-dashboard"><a href="/dashboard.html" class="active">Dashboard</a></li>
+                    <li class="icon icon-payments"><a href="/payments.html">Payments</a></li>
+                    <li class="icon icon-customers"><a href="/customers.html">Customers</a></li>
+                    <li class="icon icon-refunds"><a href="/refunds.html">Refunds</a></li>
+                    <li class="icon icon-payouts"><a href="/payouts.html">Payouts</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        <div class="all-content">
+            <div class="top-bar">
+                <p>Overview of your payment activity</p>
+                <button class="button-primary">+New Payment</button>
+                <button class="button-secondary">Export</button>
             </div>
-            <div class="stat">
-              <span class="stat-label">Settlement</span>
-              <strong>Next business day</strong>
+            <div class="main-content">
+                <section class="panels grid grid-3">
+                    <div class="panel">
+                        <h2>Payments</h2>
+                        <p>€24,310.20</p>
+                    </div>
+                    <div class="panel">
+                        <h2>Refunds</h2>
+                        <p>€1,284.00</p>
+                    </div>
+                    <div class="panel">
+                        <h2>Payouts</h2>
+                        <p>€8,420.50</p>
+                    </div>
+                </section>
+                <section class="tables">    
+                    <div class="panel">
+                        lovely dashboard table here
+                    </div>
+                </section>
             </div>
-          </div>
-          <div class="plan-chip">Smart Routing</div>
         </div>
-      </div>
-    </section>
+    </main>
 
-    <section id="features" class="section features">
-      <div class="section-intro">
-        <p class="eyebrow">Feature set</p>
-        <h2>Everything you need to move money faster.</h2>
-      </div>
-      <div class="grid grid-3">
-        <article class="feature-card">
-          <h3>Simple integrations</h3>
-          <p>Embed payments quickly with clean APIs, checkout SDKs, and native platform support.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Global payment methods</h3>
-          <p>Support cards, wallets, bank transfers, and local tender across dozens of markets.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Built-in analytics</h3>
-          <p>Monitor authorization performance, revenue, and conversion with real-time dashboards.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="security" class="section security">
-      <div class="security-copy">
-        <p class="eyebrow">Trusted and secure</p>
-        <h2>Protect transactions with enterprise-grade controls.</h2>
-        <p>PCI-ready infrastructure, automated fraud detection, and encryption across every payment flow.</p>
-      </div>
-      <div class="security-list">
-        <div class="security-item">
-          <strong>PCI DSS Level 1</strong>
-          <p>Compliant security for both small companies and high-volume platforms.</p>
-        </div>
-        <div class="security-item">
-          <strong>Tokenization</strong>
-          <p>Store credentials securely and reduce cardholder data exposure.</p>
-        </div>
-        <div class="security-item">
-          <strong>Fraud prevention</strong>
-          <p>Smart rules, machine learning, and risk scoring that adapt to your business.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section pricing">
-      <div class="section-intro">
-        <p class="eyebrow">Pricing</p>
-        <h2>Transparent fees designed for your scale.</h2>
-      </div>
-      <div class="grid grid-3">
-        <article class="pricing-card">
-          <span class="plan-label">Starter</span>
-          <strong>$0.30 + 2.9%</strong>
-          <p>Perfect for new merchants and low-volume storefronts.</p>
-          <ul>
-            <li>Card payments</li>
-            <li>Monthly reports</li>
-            <li>Email support</li>
-          </ul>
-          <a href="#contact" class="button button-outline">Choose starter</a>
-        </article>
-        <article class="pricing-card featured">
-          <span class="plan-label">Growth</span>
-          <strong>$0.25 + 2.5%</strong>
-          <p>Best for growing brands and recurring revenue businesses.</p>
-          <ul>
-            <li>Subscriptions</li>
-            <li>Smart routing</li>
-            <li>Priority support</li>
-          </ul>
-          <a href="#contact" class="button button-primary">Choose growth</a>
-        </article>
-        <article class="pricing-card">
-          <span class="plan-label">Enterprise</span>
-          <strong>Contact us</strong>
-          <p>Custom pricing and dedicated success for high-volume operations.</p>
-          <ul>
-            <li>Customized onboarding</li>
-            <li>Dedicated account team</li>
-            <li>Global settlement</li>
-          </ul>
-          <a href="#contact" class="button button-outline">Talk to sales</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="contact-copy">
-        <p class="eyebrow">Ready to launch?</p>
-        <h2>Get your payments stack live today.</h2>
-        <p>Talk with our team to choose the right plan, integrate quickly, and start accepting payments securely.</p>
-      </div>
-      <a href="mailto:sales@smth-payments.com" class="button button-primary">Contact sales</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 Smth Payments. Smooth payment solutions.</p>
-  </footer>
+    <footer class="site-footer">
+        <p>© 2026 Smth Payments. Smooth payment solutions.</p>
+    </footer>
 </body>
 </html>
 
