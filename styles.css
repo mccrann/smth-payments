@@ -389,3 +389,57 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.demo-dialog {
+  width: min(90vw, 460px);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 25%);
+}
+
+.demo-dialog::backdrop {
+  background: rgb(0 0 0 / 65%);
+  backdrop-filter: blur(4px);
+}
+
+.demo-dialog form {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.demo-dialog h2,
+.demo-dialog p {
+  margin: 0;
+}
+
+.demo-dialog p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.demo-dialog input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+}

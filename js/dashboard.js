@@ -56,7 +56,17 @@ function renderRecentPayments() {
 
   tableBody.innerHTML = payments.map(createPaymentRow).join('');
 }
+function renderDemoUser() {
+  const nameElement = document.querySelector('#demo-user-name');
 
+  if (!nameElement) {
+    return;
+  }
+
+  const savedName = localStorage.getItem('smth-demo-name');
+
+  nameElement.textContent = savedName || 'there';
+}
 function renderSummary() {
   const payments = getPayments();
   const payouts = getPayouts();
@@ -94,6 +104,7 @@ function renderSummary() {
 
 async function startDashboard() {
   await initialiseStore();
+  renderDemoUser();
 
   renderSummary();
   renderRecentPayments();

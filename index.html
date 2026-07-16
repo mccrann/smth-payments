@@ -20,7 +20,7 @@
       <a href="#security">Security</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact" class="button button-secondary">Contact</a>
-      <a href="/demo" class="button button-outline">View demo dashboard</a>
+      <a href="/dashboard.html" class="button button-outline" id="open-demo">View Demo</a>
     </nav>
   </header>
 
@@ -154,5 +154,75 @@
   <footer class="site-footer">
     <p>© 2026 Smth Payments. Smooth payment solutions.</p>
   </footer>
+  <dialog id="demo-dialog" class="demo-dialog">
+  <form id="demo-form">
+    <button
+      id="close-demo-dialog"
+      class="dialog-close"
+      type="button"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <h2>Welcome to the SMTH Payments demo</h2>
+
+    <p>
+      Enter your name to personalise the dashboard. You can explore customer
+      records, review payments, issue refunds and reset the demo data at any
+      time.
+    </p>
+
+    <label for="demo-name">Your name</label>
+
+    <input
+      id="demo-name"
+      name="name"
+      type="text"
+      autocomplete="given-name"
+      placeholder="For example, Karen"
+      required
+    >
+
+    <button class="button button-primary" type="submit">
+      Open dashboard
+    </button>
+  </form>
+</dialog>
+<script>
+  const demoDialog = document.querySelector('#demo-dialog');
+  const demoForm = document.querySelector('#demo-form');
+  const openDemoButton = document.querySelector('#open-demo');
+  const closeDemoButton = document.querySelector('#close-demo-dialog');
+
+  openDemoButton.addEventListener('click', () => {
+    const savedName = localStorage.getItem('smth-demo-name');
+
+    if (savedName) {
+      window.location.href = '/dashboard.html';
+      return;
+    }
+
+    demoDialog.showModal();
+  });
+
+  closeDemoButton.addEventListener('click', () => {
+    demoDialog.close();
+  });
+
+  demoForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(demoForm);
+    const name = String(formData.get('name')).trim();
+
+    if (!name) {
+      return;
+    }
+
+    localStorage.setItem('smth-demo-name', name);
+    window.location.href = '/dashboard.html';
+  });
+</script>
 </body>
 </html>
