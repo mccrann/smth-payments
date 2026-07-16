@@ -66,7 +66,16 @@ button:hover {
 }
 .grid {
     display: grid;
-    gap: var(--space-4);
+    gap: var(--space-2);
+}
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-5 {
+    grid-template-columns: repeat(5, 1fr);
 }
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
@@ -260,7 +269,10 @@ p {
     color: #247647;
     background: #e7f6ec;
 }
-
+.status-refunded {
+    color: #55555d;
+    background: #ededf0;
+}
 .status-pending {
     color: #846217;
     background: #fff3d6;

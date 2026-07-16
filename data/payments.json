@@ -31,5 +31,159 @@
     "lastFour": "1098",
     "refundedAmount": 0,
     "createdAt": "2026-07-16T10:41:00.000Z"
+  },
+  {
+    "id": "pay_004",
+    "customerId": "cus_001",
+    "amount": 129900,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Visa",
+    "lastFour": "7314",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-15T16:14:00.000Z"
+  },
+  {
+    "id": "pay_005",
+    "customerId": "cus_002",
+    "amount": 4500,
+    "currency": "EUR",
+    "status": "refunded",
+    "paymentMethod": "Mastercard",
+    "lastFour": "3052",
+    "refundedAmount": 4500,
+    "createdAt": "2026-07-15T14:10:00.000Z"
+  },
+  {
+    "id": "pay_006",
+    "customerId": "cus_003",
+    "amount": 78900,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Visa",
+    "lastFour": "6684",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-15T11:02:00.000Z"
+  },
+  {
+    "id": "pay_007",
+    "customerId": "cus_001",
+    "amount": 15000,
+    "currency": "EUR",
+    "status": "pending",
+    "paymentMethod": "Visa",
+    "lastFour": "4428",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-14T18:44:00.000Z"
+  },
+  {
+    "id": "pay_008",
+    "customerId": "cus_002",
+    "amount": 6200,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Mastercard",
+    "lastFour": "9921",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-14T16:18:00.000Z"
+  },
+  {
+    "id": "pay_009",
+    "customerId": "cus_003",
+    "amount": 29900,
+    "currency": "EUR",
+    "status": "failed",
+    "paymentMethod": "Visa",
+    "lastFour": "1187",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-14T09:32:00.000Z"
+  },
+  {
+    "id": "pay_010",
+    "customerId": "cus_001",
+    "amount": 19900,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Visa",
+    "lastFour": "8543",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-13T17:22:00.000Z"
+  },
+  {
+    "id": "pay_011",
+    "customerId": "cus_002",
+    "amount": 9800,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Mastercard",
+    "lastFour": "3410",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-13T15:40:00.000Z"
+  },
+  {
+    "id": "pay_012",
+    "customerId": "cus_003",
+    "amount": 5600,
+    "currency": "EUR",
+    "status": "refunded",
+    "paymentMethod": "Visa",
+    "lastFour": "2785",
+    "refundedAmount": 5600,
+    "createdAt": "2026-07-13T10:08:00.000Z"
+  },
+  {
+    "id": "pay_013",
+    "customerId": "cus_001",
+    "amount": 32000,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Visa",
+    "lastFour": "1182",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-12T16:12:00.000Z"
+  },
+  {
+    "id": "pay_014",
+    "customerId": "cus_002",
+    "amount": 8750,
+    "currency": "EUR",
+    "status": "pending",
+    "paymentMethod": "Mastercard",
+    "lastFour": "5543",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-12T14:52:00.000Z"
+  },
+  {
+    "id": "pay_015",
+    "customerId": "cus_003",
+    "amount": 150000,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Visa",
+    "lastFour": "6629",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-11T19:26:00.000Z"
+  },
+  {
+    "id": "pay_016",
+    "customerId": "cus_001",
+    "amount": 24950,
+    "currency": "EUR",
+    "status": "failed",
+    "paymentMethod": "Visa",
+    "lastFour": "7811",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-11T11:41:00.000Z"
+  },
+  {
+    "id": "pay_017",
+    "customerId": "cus_002",
+    "amount": 52000,
+    "currency": "EUR",
+    "status": "paid",
+    "paymentMethod": "Mastercard",
+    "lastFour": "9402",
+    "refundedAmount": 0,
+    "createdAt": "2026-07-10T15:03:00.000Z"
   }
 ]
