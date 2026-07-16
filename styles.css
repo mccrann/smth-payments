@@ -111,7 +111,13 @@ a {
   text-align: center;
   margin-bottom: 2.5rem;
 }
-
+.look-at-me {
+  background: #f00;
+  color: #fff;
+}
+button#open-demo:hover {
+  background: linear-gradient(to right, #f00, #58110c);
+}
 .eyebrow {
   margin: 0 0 0.75rem;
   color: #2563eb;
