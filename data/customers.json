@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cus_001",
+    "name": "Aoife Murphy",
+    "email": "aoife@example.com",
+    "status": "active",
+    "createdAt": "2026-06-18T10:30:00.000Z"
+  },
+  {
+    "id": "cus_002",
+    "name": "Sean Lyons",
+    "email": "sean@example.com",
+    "status": "active",
+    "createdAt": "2026-06-21T14:15:00.000Z"
+  },
+  {
+    "id": "cus_003",
+    "name": "Niamh Byrne",
+    "email": "niamh@example.com",
+    "status": "active",
+    "createdAt": "2026-06-24T09:45:00.000Z"
+  }
+]

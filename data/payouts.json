@@ -1,0 +1,16 @@
+[
+  {
+    "id": "po_001",
+    "amount": 842050,
+    "currency": "EUR",
+    "status": "scheduled",
+    "scheduledFor": "2026-07-16T15:00:00.000Z"
+  },
+  {
+    "id": "po_002",
+    "amount": 489000,
+    "currency": "EUR",
+    "status": "estimated",
+    "scheduledFor": "2026-07-17T09:00:00.000Z"
+  }
+]
