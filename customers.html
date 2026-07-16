@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Demo Dashboard | Smth Payments</title>
+<title>Demo Dashboard Customers | Smth Payments</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=VT323&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
                 <ul>
                     <li class="icon icon-dashboard"><a href="/dashboard.html" class="active">Dashboard</a></li>
                     <li class="icon icon-payments"><a href="/payments.html">Payments</a></li>
-                    <li class="icon icon-customers"><a href="/customers.html">Customers</a></li>
+                    <li class="icon icon-customers active"><a href="/customers.html">Customers</a></li>
                     <li class="icon icon-refunds"><a href="/refunds.html">Refunds</a></li>
                     <li class="icon icon-payouts"><a href="/payouts.html">Payouts</a></li>
                 </ul>
@@ -27,10 +27,12 @@
         <div class="all-content">
             <div class="top-bar">
                 <p>Overview of your payment activity</p>
-                <button id="reset-demo-data" type="button" class="button-primary">
+                <button id="reset-demo-data" type="button" class="button-danger">
                     Reset demo data
                 </button>
-                <button class="button-primary">+New Payment</button>            
+                <button id="open-customer-form" class="button button-primary" type="button">
+                    Add customer
+                </button>
             </div>
         <main class="main-content">
   <header class="page-header">
@@ -39,9 +41,7 @@
       <p>Manage the people who pay your business.</p>
     </div>
 
-    <button id="open-customer-form" class="button button-primary" type="button">
-      Add customer
-    </button>
+    
   </header>
 
   <section class="panel">

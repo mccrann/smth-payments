@@ -4,12 +4,14 @@ import {
   formatDateTime,
   getCustomers,
   initialiseStore,
+  resetDemoData,
 } from './store.js';
 
 const form = document.querySelector('#customer-form');
 const openFormButton = document.querySelector('#open-customer-form');
 const cancelFormButton = document.querySelector('#cancel-customer-form');
 const customersBody = document.querySelector('#customers-body');
+const resetDemoDataButton = document.querySelector('#reset-demo-data');
 
 function escapeHtml(value) {
   return String(value)
@@ -96,7 +98,10 @@ form.addEventListener('submit', (event) => {
 
 openFormButton.addEventListener('click', openForm);
 cancelFormButton.addEventListener('click', closeForm);
-
+resetDemoDataButton.addEventListener('click', async () => {
+  await resetDemoData();
+  renderCustomers();
+});
 async function startCustomersPage() {
   await initialiseStore();
   renderCustomers();
