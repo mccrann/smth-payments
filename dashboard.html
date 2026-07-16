@@ -27,22 +27,24 @@
         <div class="all-content">
             <div class="top-bar">
                 <p>Overview of your payment activity</p>
-                <button class="button-primary">+New Payment</button>
-                <button class="button-secondary">Export</button>
+                <button id="reset-demo-data" type="button" class="button-primary">
+                    Reset demo data
+                </button>
+                <button class="button-primary">+New Payment</button>            
             </div>
             <div class="main-content">
                 <section class="panels grid grid-3">
                     <div class="panel">
                         <h2>Payments</h2>
-                        <p>€24,310.20</p>
+                        <p id="payments-total">€0.00</p>
                     </div>
                     <div class="panel">
                         <h2>Refunds</h2>
-                        <p>€1,284.00</p>
+                       <p id="refunds-total">€0.00</p>
                     </div>
                     <div class="panel">
                         <h2>Payouts</h2>
-                        <p>€8,420.50</p>
+                       <p id="next-payout-total">€0.00</p>
                     </div>
                 </section>
                 <section class="panel">
@@ -75,7 +77,7 @@
     <footer class="site-footer">
         <p>© 2026 Smth Payments. Smooth payment solutions.</p>
     </footer>
-<script type="module" src="/js/data-2.js"></script>
+<script type="module" src="/js/dashboard.js"></script>
 </body>
 </html>
 
