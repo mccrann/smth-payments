@@ -37,7 +37,6 @@ export async function initialiseStore() {
 
 function read(type) {
   const rawData = localStorage.getItem(STORAGE_KEYS[type]);
-
   if (!rawData) {
     return [];
   }
@@ -145,4 +144,40 @@ export function formatDateTime(dateString) {
     hour: '2-digit',
     minute: '2-digit',
   }).format(new Date(dateString));
+}
+export function getPaymentById(paymentId) {
+  return getPayments().find((payment) => payment.id === paymentId) ?? null;
+}
+
+export function refundPayment(paymentId) {
+  const payments = getPayments();
+
+  const payment = payments.find((item) => item.id === paymentId);
+
+  if (!payment) {
+    throw new Error('Payment not found');
+  }
+
+  if (payment.status !== 'paid') {
+    throw new Error('Only paid payments can be refunded');
+  }
+
+  if (payment.refundedAmount >= payment.amount) {
+    throw new Error('This payment has already been refunded');
+  }
+
+  const updatedPayments = payments.map((item) =>
+    item.id === paymentId
+      ? {
+          ...item,
+          status: 'refunded',
+          refundedAmount: item.amount,
+          refundedAt: new Date().toISOString(),
+        }
+      : item,
+  );
+
+  savePayments(updatedPayments);
+
+  return updatedPayments.find((item) => item.id === paymentId);
 }

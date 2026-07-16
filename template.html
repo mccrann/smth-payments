@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Demo Dashboard Customers | Smth Payments</title>
+<title>Demo Dashboard | Smth Payments</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=VT323&display=swap" rel="stylesheet">
@@ -26,8 +26,7 @@
         </div>
         <div class="all-content">
             <div class="top-bar">
-                 <h1>Customers</h1>
-      <p>Manage the people who pay your business.</p>
+                <p>Overview of your payment activity</p>
                 <button id="reset-demo-data" type="button" class="button-danger">
                     Reset demo data
                 </button>
@@ -35,55 +34,9 @@
                     Add customer
                 </button>
             </div>
-        <main class="main-content">
-  <header class="page-header">
-    <div>
-     
-    </div>
+            <main class="main-content">
 
-    
-  </header>
-
-  <section class="panel">
-    <form id="customer-form" class="customer-form" hidden>
-      <div>
-        <label for="customer-name">Name</label>
-        <input id="customer-name" name="name" required>
-      </div>
-
-      <div>
-        <label for="customer-email">Email</label>
-        <input id="customer-email" name="email" type="email" required>
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="button button-primary">
-          Save customer
-        </button>
-
-        <button id="cancel-customer-form" type="button" class="button">
-          Cancel
-        </button>
-      </div>
-    </form>
-
-    <div class="table-wrapper">
-      <table class="payments-table">
-        <thead>
-          <tr>
-            <th>Customer</th>
-            <th>Status</th>
-            <th>Created</th>
-            <th></th>
-          </tr>
-        </thead>
-
-        <tbody id="customers-body"></tbody>
-      </table>
-    </div>
-  </section>
-</main>
-
+            </main>    
 
     <footer class="site-footer">
         <p>© 2026 Smth Payments. Smooth payment solutions.</p>
