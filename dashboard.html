@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-demo.css" />
+<script type="module">
+    import { RECENT_PAYMENTS_LIMIT } from '/js/dashboard.js';
+</script>
 </head>
 <body>
     <main>
@@ -42,6 +45,8 @@
                     This is a browser-based demo using synthetic payment data. Explore
                     customers, review payment statuses and issue full refunds. Changes are
                     saved locally in your browser and can be removed using Reset demo data.
+                    The demo is not connected to any real payment processor and does not process any real payments.
+                    The Dashboard table below shows the latest ${RECENT_PAYMENTS_LIMIT} payments, their amounts, status and customer.
                     </p>
                 </div>
                 <section class="panels grid grid-3">
