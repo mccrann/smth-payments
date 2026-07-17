@@ -25,6 +25,11 @@
   --space-3:12px;
   --space-4:16px;
   --space-5:20px;
+  --space-6:24px;
+  --space-7:28px;
+  --space-8:32px;
+  --space-9:36px;
+  --space-10:40px;
 
   font:100%/1.5 "Inter", sans-serif;
 }
@@ -36,6 +41,9 @@
 body {
   margin: 0;
   background: var(--bg);
+}
+footer {
+    clear:both;
 }
 button {
     border: 2px solid var(--muted);
@@ -103,17 +111,14 @@ button:hover {
 .main-content {
     background: var(--bg);
     width: calc(100% - 250px);
-    height: 100vh;
+    min-height: 100vh;
     float:left;
     padding: var(--space-4);
 }
 .site-footer {
     background: var(--surface-1);
-    height: 60px;
-    width: 100%;
-    display:flex;
-    justify-content: left;
-    align-items: left;
+    clear:both;
+    padding: var(--space-5) var(--space-4);
 }
 .panel {
     background: var(--surface);
@@ -122,7 +127,55 @@ button:hover {
     padding: var(--space-4);
     margin-bottom: var(--space-4);
 }
+.demo-notice {
+  background: #f1f1f3;
+  border: 1px solid #ddddE2;
+  color: #66666d;
+}
+.reset-demo-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
+  padding: 0.65rem 1rem;
+
+  border: 1px solid #d1d1d6;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #5f5f67;
+
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.reset-demo-button:hover {
+  border-color: #b54444;
+  background: #fff5f5;
+  color: #9f3434;
+
+  box-shadow: 0 4px 14px rgba(159, 52, 52, 0.1);
+  transform: translateY(-1px);
+}
+
+.reset-demo-button:active {
+  transform: translateY(0);
+}
+
+.reset-demo-button:focus-visible {
+  outline: 3px solid rgba(181, 68, 68, 0.2);
+  outline-offset: 2px;
+}
 .button-primary
 .button-secondary
 .button-danger{
@@ -198,7 +251,34 @@ nav.site-nav a:hover {
 .icon-dashboard {
     background: url('icons/dashboard.svg') no-repeat left center;
 }
-
+.payments2-img {
+    background: url('icons/payments2.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
+.payments3-img {
+    background: url('icons/payments3.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
+.refunds-img {
+    background: url('icons/refund-red.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
+.refunds-grey-img {
+    background: url('icons/refund-grey.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
+.payouts-img {
+    background: url('icons/payout.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
+.failed-img {
+    background: url('icons/failed.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
+.pending-img {
+    background: url('icons/pending.svg') no-repeat left center;
+    padding-left: var(--space-10);
+}
 /* types */
 h2 {
     color: var(--text);
