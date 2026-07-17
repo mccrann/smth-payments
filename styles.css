@@ -38,13 +38,21 @@ a {
   text-decoration: none;
 }
 
-.site-header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  max-width: 1180px;
+  padding: 2rem 10%;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .site-brand {
@@ -111,7 +119,121 @@ a {
   text-align: center;
   margin-bottom: 2.5rem;
 }
+.look-at-me {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: .02em;
+
+    color: white;
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #ff4d4d,
+        #d7263d
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 8px 30px rgba(215,38,61,.35),
+        inset 0 1px 1px rgba(255,255,255,.15);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+.look-at-me:before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform: skewX(-25deg);
+
+    animation: demoShine 4s infinite;
+
+}
+.look-at-me:hover {
+transform:
+        translateY(-2px)
+        scale(1.03);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 14px 40px rgba(215,38,61,.45),
+        inset 0 1px 1px rgba(255,255,255,.2);
+      }
+.look-at-me:active {
+
+    transform: scale(.98);
+}
+@keyframes demoShine {
+
+    0% {
+        left: -120%;
+    }
+
+    30% {
+        left: 140%;
+    }
+
+    100% {
+        left: 140%;
+    }
+
+}
+
+.demo-pill {
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    padding:4px 10px;
+
+    border-radius:999px;
+
+    background:#ffe8ec;
+
+    color:#d7263d;
+
+    font-size:.7rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
 .eyebrow {
   margin: 0 0 0.75rem;
   color: #2563eb;
@@ -391,55 +513,114 @@ a {
 }
 
 .demo-dialog {
-  width: min(90vw, 460px);
-  padding: 0;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: 0 24px 80px rgb(0 0 0 / 25%);
+    width: min(90vw, 480px);
+    padding: 0;
+
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 24px;
+
+    background: #ffffff;
+    color: #111827;
+
+    box-shadow:
+        0 30px 90px rgba(15, 23, 42, 0.35),
+        0 8px 24px rgba(15, 23, 42, 0.12);
 }
 
 .demo-dialog::backdrop {
-  background: rgb(0 0 0 / 65%);
-  backdrop-filter: blur(4px);
+    background: rgba(15, 23, 42, 0.68);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .demo-dialog form {
-  position: relative;
-  display: grid;
-  gap: 1rem;
-  padding: 2rem;
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
 }
 
-.demo-dialog h2,
-.demo-dialog p {
-  margin: 0;
+.demo-dialog h2 {
+    margin: 0;
+    padding-right: 2rem;
+
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
 }
 
 .demo-dialog p {
-  color: var(--muted);
-  line-height: 1.6;
+    margin: 0 0 0.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.demo-dialog label {
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
 .demo-dialog input {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
+    width: 100%;
+    padding: 0.9rem 1rem;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+    background: #f8fafc;
+    color: #111827;
+
+    font: inherit;
+    outline: none;
+}
+
+.demo-dialog input:focus {
+    border-color: #0f172a;
+
+    box-shadow:
+        0 0 0 3px rgba(15, 23, 42, 0.12);
+}
+
+.demo-dialog .button {
+    width: 100%;
+    margin-top: 0.5rem;
+
+    border: 0;
+    background: #0f172a;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.demo-dialog .button:hover {
+    background: #1e293b;
 }
 
 .dialog-close {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.9rem;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font-size: 1.5rem;
-  cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #f1f5f9;
+    color: #475569;
+
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.dialog-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
 }
