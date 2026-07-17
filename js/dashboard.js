@@ -8,8 +8,6 @@ import {
   resetDemoData,
 } from './store.js';
 
-export const RECENT_PAYMENTS_LIMIT = 5;
-
 function createPaymentRow(payment) {
   const customer = getCustomerById(payment.customerId);
 
