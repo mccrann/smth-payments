@@ -118,6 +118,11 @@ export function archiveCustomer(customerId) {
     status: 'archived',
   });
 }
+export function unarchiveCustomer(customerId) {
+  updateCustomer(customerId, {
+    status: 'active',
+  });
+}
 
 export async function resetDemoData() {
   const types = Object.keys(STORAGE_KEYS);

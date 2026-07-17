@@ -5,6 +5,7 @@ import {
   getCustomers,
   initialiseStore,
   resetDemoData,
+  unarchiveCustomer,
 } from './store.js';
 
 const form = document.querySelector('#customer-form');
@@ -52,7 +53,15 @@ function createCustomerRow(customer) {
                 Archive
               </button>
             `
-            : ''
+            : `
+              <button
+                class="button button-small unarchive-customer"
+                type="button"
+                data-customer-id="${customer.id}"
+              >
+                Unarchive
+              </button>
+            `
         }
       </td>
     </tr>
@@ -67,6 +76,13 @@ function renderCustomers() {
   document.querySelectorAll('.archive-customer').forEach((button) => {
     button.addEventListener('click', () => {
       archiveCustomer(button.dataset.customerId);
+      renderCustomers();
+    });
+  });
+
+  document.querySelectorAll('.unarchive-customer').forEach((button) => {
+    button.addEventListener('click', () => {
+      unarchiveCustomer(button.dataset.customerId);
       renderCustomers();
     });
   });
