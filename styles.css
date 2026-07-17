@@ -112,12 +112,122 @@ a {
   margin-bottom: 2.5rem;
 }
 .look-at-me {
-  background: #f00;
-  color: #fff;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: .02em;
+
+    color: white;
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #ff4d4d,
+        #d7263d
+    );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 8px 30px rgba(215,38,61,.35),
+        inset 0 1px 1px rgba(255,255,255,.15);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+
+    overflow: hidden;
+    cursor: pointer;
 }
-button#open-demo:hover {
-  background: linear-gradient(to right, #f00, #58110c);
+.look-at-me:before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform: skewX(-25deg);
+
+    animation: demoShine 4s infinite;
+
 }
+.look-at-me:hover {
+transform:
+        translateY(-2px)
+        scale(1.03);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 14px 40px rgba(215,38,61,.45),
+        inset 0 1px 1px rgba(255,255,255,.2);
+      }
+.look-at-me:active {
+
+    transform: scale(.98);
+}
+@keyframes demoShine {
+
+    0% {
+        left: -120%;
+    }
+
+    30% {
+        left: 140%;
+    }
+
+    100% {
+        left: 140%;
+    }
+
+}
+
+.demo-pill {
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    padding:4px 10px;
+
+    border-radius:999px;
+
+    background:#ffe8ec;
+
+    color:#d7263d;
+
+    font-size:.7rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+}
+
+
 .eyebrow {
   margin: 0 0 0.75rem;
   color: #2563eb;
