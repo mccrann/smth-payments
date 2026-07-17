@@ -8,6 +8,8 @@ import {
   resetDemoData,
 } from './store.js';
 
+export const RECENT_PAYMENTS_LIMIT = 5;
+
 function createPaymentRow(payment) {
   const customer = getCustomerById(payment.customerId);
 
@@ -52,7 +54,7 @@ function renderRecentPayments() {
         new Date(secondPayment.createdAt) -
         new Date(firstPayment.createdAt),
     )
-    .slice(0, 5);
+    .slice(0, RECENT_PAYMENTS_LIMIT);
 
   tableBody.innerHTML = payments.map(createPaymentRow).join('');
 }
