@@ -1,1 +1,1 @@
-export const RECENT_PAYMENTS_LIMIT = 10;
+export const RECENT_PAYMENTS_LIMIT = 12;
